@@ -128,7 +128,7 @@ client.on('message', message => {
 });
 
 var id = ['388074664649293836'] //تذكر إذا كنت تبي تضيف شخص معاك حط فاصله وبعدين العلامه '
-var initcmd = ''
+var initcmd = '-'
 const developers = id
 const adminprefix = initcmd;
 client.on('message', message => {
