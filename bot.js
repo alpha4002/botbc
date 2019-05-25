@@ -81,12 +81,30 @@ m.sendMessage(args)
        -obc | لأرسال برود كاست للكل
 
        -bc  |  لأرسال برود كاست للأونلاين
+      
+       -bot | معلومات البوت
 
        ** `)
    message.author.sendEmbed(embed)
    
    }
    });
+
+
+client.on('message', message => {
+    if(message.content === "-bot") {
+        const embed = new Discord.RichEmbed()
+        .setColor("#00FFFF")
+  .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
+         .addField('**سرعة الاتصال📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+        .addField('**استخدام المعالج💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
+        .addField('**🌐 عدد السيرفرات**' , `${client.guilds.size}`, true)
+        .addField('**عدد المستخدمين 👥 **' , `${client.users.size}`, true)
+               message.channel.sendEmbed(embed);
+           }
+});
+
+
 
 const developers = ["388074664649293836","id"]
 client.on('message', message => {
