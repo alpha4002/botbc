@@ -65,36 +65,8 @@ m.sendMessage(args)
 }
 });
 
-const moment = require('moment');
 
-client.on('message',async message => { 
-    if (message.content.startsWith(prefix + 'id')) {
-        if (message.author.bot) return
-        if (!message.guild) return message.reply('**This Command Just In Servers**')
-        message.guild.fetchInvites().then(invs => {
-            let personalInvites = invs.filter(i => i.inviter.id === message.author.id)
-            let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0)
-          var roles = message.member.roles.map(roles => `**__${roles.name}__ |**`).join(` `)
-        let id = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle('📋 | User identity info')
-        .setAuthor(message.author.username,message.author.avatarURL)
-        .addField('• Name :', message.author.username,true)
-        .addField('• Tag :', message.author.discriminator,true)
-        .addField('• ID :', message.author.id,true)
-        .addField('• JoinedAt :', moment(message.joinedAt).format('D/M/YYYY h:mm a '),true)
-        .addField('• CreatedAt :', moment(message.joinedAt).format('D/M/YYYY h:mm a '),true)
-        .addField('• Total invites :', inviteCount,true)
-        .addField('• Roles :', roles)
-        .setTimestamp()
-        message.channel.sendEmbed(id).then(c => {
-            c.react('📋') 
-                })
-            })
-        }
-    
-        
-});
+      
 
 client.on('message', msg => {
     if(msg.content === '-inv')
