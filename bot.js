@@ -175,7 +175,33 @@ client.on('message', message => {
 });
 
 
+// لازم تمتب الامر بعدين تمنشن الرتبه  
 
+client.on('message' , message => {
+      if(message.author.bot) return;
+     
+      if(message.content.startsWith(prefix + "rolebc")) {
+        if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+        let args = message.content.split(" ").slice(2);
+     var codes = args.join(' ')
+       
+        if(!codes) {
+          message.channel.send("قم بكتابة الرسالة | `$rolebc role message`")
+            return;
+        }
+     
+     
+              var role = message.mentions.roles.first();
+                if(!role) {
+                  message.reply("لا توجد رتبة بهذا الاسم")
+                    return;
+                }
+            message.guild.members.filter(m => m.roles.get(role.id)).forEach(n => {
+              n.send(`${codes}`)
+            })
+            message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عضو`)
+        }
+    }); //Toxic Codes // n3k4a
 
 
 
