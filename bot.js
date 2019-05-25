@@ -70,6 +70,19 @@ m.sendMessage(args)
     msg.reply('Check Your DM :white_check_mark:')
   });
   
+ client.on("message", message => {
+    if (message.content === "-inv") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**رابط البوت** 
+
+         https://discordapp.com/api/oauth2/authorize?client_id=581606455539531786&permissions=0&scope=bot `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
   
   client.on("message", message => {
     if (message.content === "-help") {
@@ -83,6 +96,8 @@ m.sendMessage(args)
        -bc  |  لأرسال برود كاست للأونلاين
       
        -bot | معلومات البوت
+ 
+       -inv
 
        ** `)
    message.author.sendEmbed(embed)
