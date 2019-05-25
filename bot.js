@@ -107,6 +107,8 @@ client.on('message', msg => {
  
        -inv |  لدعوة البوت لسيرفر
 
+       -contact |  للتواصل مع صاحب البوت
+
    **لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك**
 
               https://discord.gg/dMMh4a6
@@ -154,6 +156,20 @@ message.channel.send(`Your message has been successfully delivered to the bot ow
 }
 });
 
+
+
+client.on('message', message => {
+  if(message.content === prefix + "user"){
+    var embed = new Discord.RichEmbed()
+    .setTitle(message.author.tag, message.author.avatarURL)
+    .addField(`User`, message.author.username)
+    .addField(`Discrim`,`#`+ message.author.discriminator)
+    .addField(`Name Color Role`, message.member.colorRole)
+    .addField(`Game`,message.author.presence.game ||"Idel.")
+    .addField(`Status`,message.author.presence.status)
+    message.channel.send(embed);
+  }
+});
 
 
 
