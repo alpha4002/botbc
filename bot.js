@@ -107,9 +107,9 @@ client.on('message', msg => {
  
        -inv |  لدعوة البوت لسيرفر
 
-        **لو واجهت اي مشكلة مع البوت سيرفر الدع في خدمتك**
+        **لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك**
 
-                   https://discord.gg/dMMh4a6
+              https://discord.gg/dMMh4a6
 
        ** `)
    message.author.sendEmbed(embed)
