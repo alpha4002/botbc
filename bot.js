@@ -107,8 +107,6 @@ client.on('message', msg => {
  
        -inv |  لدعوة البوت لسيرفر
 
-       -id  |  لمعرفة معلوماتك
-
        ** `)
    message.author.sendEmbed(embed)
    
