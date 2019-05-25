@@ -103,6 +103,8 @@ client.on('message', msg => {
        -obc |  لأرسال برود كاست للكل
 
        -bc  |  لأرسال برود كاست للأونلاين
+
+       -rolebc |  لأرسال برودكسات لرتبة معينة
       
        -bot |  معلومات البوت
  
@@ -186,7 +188,7 @@ client.on('message' , message => {
      var codes = args.join(' ')
        
         if(!codes) {
-          message.channel.send("قم بكتابة الرسالة | `$rolebc role message`")
+          message.channel.send("قم بكتابة الرسالة")
             return;
         }
      
@@ -204,7 +206,12 @@ client.on('message' , message => {
     }); //Toxic Codes // n3k4a
 
 
-
+client.on("guildCreate", () => {
+    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
+});
+client.on("guildDelete", () => {
+    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
+});
 
 
 
