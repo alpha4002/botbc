@@ -136,22 +136,39 @@ client.on('guildCreate', guild => {
   });
 		
 
-majd.on('message', function(msg) {
-if(msg.content.startsWith (prefix  + 'server')) {
- let embed = new Discord.RichEmbed()
- .setColor('RANDOM')
- .setThumbnail(msg.guild.iconURL)
- .setTitle(`Showing Details Of  **${msg.guild.name}*`)
- .addField('🌐** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
- .addField('🏅** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
- .addField('🔴**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
- .addField('🔵**__ عدد الاعضاء الاونلاين__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
- .addField('📝**__ الرومات الكتابية__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
- .addField('🎤**__ رومات الصوت__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
- .addField('👑**__ الأونـر__**',`**${msg.guild.owner}**`,true)
- .addField('🆔**__ ايدي السيرفر__**',`**${msg.guild.id}**`,true)
- .addField('📅**__ تم عمل السيرفر في__**',msg.guild.createdAt.toLocaleString())
- msg.channel.send({embed:embed});
+
+const devs = ["388074664649293836"];
+const adminprefix = ["-"];
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith('(prefix))ply')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+     if (message.content === ("leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content.startsWith('(prefix)wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith('mils')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith('(prefix)st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");
+      message.channel.send(`**✅**`)
+  }
+  if (message.content.startsWith('(prefix)setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith('(prefix)setavatar')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
 });
 
