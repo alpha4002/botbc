@@ -3,6 +3,12 @@ const client = new Discord.Client();
 var prefix = "-"
 var adminprefix = '-'
 
+const Discord = require("discord.js");
+const MooDY = new Discord.Client();
+MooDY.on('ready', () => {
+  MooDY.user.setGame(`-help | -inv`,'https://www.twitch.tv/iiMooDY9');
+  console.log("["+MooDY.user.username+"] Online now !!");
+});
 
 //bc
 
