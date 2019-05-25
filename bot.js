@@ -65,6 +65,11 @@ m.sendMessage(args)
 }
 });
 
+client.on('message', msg => {
+    if(msg.content === '-inv')
+    msg.reply('Check Your DM :white_check_mark:')
+  });
+
   client.on('message', msg => {
     if(msg.content === '-help')
     msg.reply('Check Your DM :white_check_mark:')
@@ -91,13 +96,13 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       -obc | لأرسال برود كاست للكل
+       -obc |  لأرسال برود كاست للكل
 
        -bc  |  لأرسال برود كاست للأونلاين
       
-       -bot | معلومات البوت
+       -bot |  معلومات البوت
  
-       -inv
+       -inv |  لدعوة البوت لسيرفرك
 
        ** `)
    message.author.sendEmbed(embed)
