@@ -66,7 +66,20 @@ m.sendMessage(args)
 }
 });
 
+ 
+ient.on('message', message => {
+    let prefix = "-";
+    if(message.content.startsWith(prefix + ('clear'))){
+if(!message.member.roles.has(message.guild.roles.find("clear", "مسح")) return
+   message.channel.fetchMessages()
+    
 
+   .then(messages => {
+        message.channel.bulkDelete(messages);
+        message.channel.send(`*تم مسح ${messages.size} رسالة بالقناه*`)
+   });
+}
+});
       
 
 client.on('message', msg => {
