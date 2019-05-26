@@ -209,10 +209,10 @@ client.on('message' , message => {
 
 
 client.on("guildCreate", () => {
-    client.user.setActivity(`${prefix}help ${clinet.guilds.size});
+    client.user.setActivity(`${prefix}help ${clinet.guilds.size}:);
 });
 client.on("guildDelete", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size});
+    client.user.setActivity(`${prefix}help ${client.guilds.size}:);
 });
 
 client.on('message', function(msg) {
