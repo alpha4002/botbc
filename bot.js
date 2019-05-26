@@ -4,7 +4,13 @@ var prefix = "-"
 var adminprefix = '-'
 
 
-
+client.on('message', message => { 
+if(message.content.startsWith(prefix + "setgame")){
+    var setgame = message.content.split(` `).slice(1).join(' ');
+    if(!setgame) return message.reply("Err or")
+client.user.setGame(d1);
+} // 
+});
 
 //bc
 
