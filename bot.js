@@ -262,7 +262,7 @@ if (message.content.startsWith(prefix + 'help')) { //DiamondCodes - [ X_KillerYT
     https://discord.gg/dMMh4a6
 
 
-**`)
+  `)
    message.author.sendEmbed(embed)
    
    }
