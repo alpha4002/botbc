@@ -207,13 +207,38 @@ client.on('message' , message => {
         }
     }); //Toxic Codes // n3k4a
 
+السلام عليكم اليوم
+جبتلكوا شرح سهل و اغلب الناس ما تعرف عنه كثير
+(الناس)
+مو المبرمجين عشان لاحد يجي يسبني خاص
+المهم في اشياء هم
+-stream
+-watch
+-listen
+-play
+اول شي
+1- play
+هوا بلينج عادي بي يظهر عندك
+مثل http://prntscr.com/npxwp1
+و كوده ذا 
+        client.user.setActivity("اكتب البلينج", { type: "PLAYING"})
 
-client.on("guildCreate", () => {
-    client.user.setActivity(`${prefix}help ${clinet.guilds.size}:);
-});
-client.on("guildDelete", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}:);
-});
+2- listen
+هوا لستينج cowboy 
+http://prntscr.com/npxxty
+        client.user.setActivity("اكتب اللستينج وصاب", { type: "LISTENING"})
+
+3 - watch 
+وتشينج emoji_m  اشرح اكثر من كذا اش
+http://prntscr.com/npxyzj
+        client.user.setActivity("اكتب ", { type: "WATCHING"})
+
+
+
+client.user.setActivity(`-help | -inv`, { type: "STREAMING", url: "https://www.twitch.tv/jfavignano"})
+
+
+
 
 client.on('message', function(msg) {
     const prefix = '-'
