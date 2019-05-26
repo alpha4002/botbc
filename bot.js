@@ -271,7 +271,7 @@ client.on('message', function(msg) {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
                   .addField('``My Prefix``' , `[ - ]` , true)//by speedddd
                   .addField('``My Language``' , `[ Java Script ]` , true)
-                  .addField('Developers:', `**<@543434595601743883>,<@519896224229228544>,<@577209427539787786>**`)
+                  .addField('Developers:', `**<@388074664649293836>**`)
                   .addField('**Support** :' , `https://discord.gg/dMMh4a6` , true)
                   .addField('**invite me** :' , `https://discordapp.com/api/oauth2/authorize?client_id=581606455539531786&permissions=0&scope=bot` , true)
                   .setFooter('**رسالة بوت 2019**')
