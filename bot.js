@@ -86,7 +86,42 @@ m.sendMessage(args)
 }
 });
 
+
+
+
+client.on('message', msg => {
+if(msg.content === prefix+"help"){
+msg.author.send("
+
+   -obc |  لأرسال برود كاست للكل
+
+   -bc  |  لأرسال برود كاست للأونلاين
+
+   -rolebc |  لأرسال برودكسات لرتبة معينة
+      
+   -bot |  معلومات البوت
  
+   -inv |  لدعوة البوت لسيرفر
+
+   -server |  لمعرفة معلومات السيرفر
+
+   -user |  لمعرفة معلوماتك
+
+   -contact |  للتواصل مع صاحب البوت
+
+   ``لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك``
+
+         https://discord.gg/dMMh4a6
+
+
+")
+}
+});
+
+
+
+
+
 
       
 
@@ -114,38 +149,7 @@ client.on('message', msg => {
    });
 
   
-  client.on("message", message => {
-    if (message.content === "-help") {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#00FF00")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`**Help|هيلب
-
-   -obc |  لأرسال برود كاست للكل
-
-   -bc  |  لأرسال برود كاست للأونلاين
-
-   -rolebc |  لأرسال برودكسات لرتبة معينة
-      
-   -bot |  معلومات البوت
- 
-   -inv |  لدعوة البوت لسيرفر
-
-   -server |  لمعرفة معلومات السيرفر
-
-   -user |  لمعرفة معلوماتك
-
-   -contact |  للتواصل مع صاحب البوت
-
-   ``لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك``
-
-              https://discord.gg/dMMh4a6
-
-        ** `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
+  
 
 
 client.on('message', message => {
