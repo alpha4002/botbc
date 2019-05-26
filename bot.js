@@ -121,23 +121,25 @@ client.on('message', msg => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       -obc |  لأرسال برود كاست للكل
+       ``-``obc |  لأرسال برود كاست للكل
 
-       -bc  |  لأرسال برود كاست للأونلاين
+       ``-``bc  |  لأرسال برود كاست للأونلاين
 
-       -rolebc |  لأرسال برودكسات لرتبة معينة
+       ``-``rolebc |  لأرسال برودكسات لرتبة معينة
       
-       -bot |  معلومات البوت
+--------------------------------------------
+
+       ``-``bot |  معلومات البوت
  
-       -inv |  لدعوة البوت لسيرفر
+       ``-``inv |  لدعوة البوت لسيرفر
 
-       -server |  لمعرفة معلومات السيرفر
+       ``-``server |  لمعرفة معلومات السيرفر
 
-       -user |  لمعرفة معلوماتك
+       ``-``user |  لمعرفة معلوماتك
 
-       -contact |  للتواصل مع صاحب البوت
+       ``-``contact |  للتواصل مع صاحب البوت
 
-   **لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك**
+   ``لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك``
 
               https://discord.gg/dMMh4a6
 
@@ -152,11 +154,11 @@ client.on('message', message => {
     if(message.content === "-bbot") {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
-  .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
-         .addField('**سرعة الاتصال📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-        .addField('**استخدام المعالج💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
-        .addField('**🌐 عدد السيرفرات**' , `${client.guilds.size}`, true)
-        .addField('**عدد المستخدمين 👥 **' , `${client.users.size}`, true)
+  .addField('``الذاكرة المستخدمة 💾``', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
+         .addField('``سرعة الاتصال📡``' , `${Date.now() - message.createdTimestamp}` + ' ms')
+        .addField('``استخدام المعالج💿``', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
+        .addField('``🌐 عدد السيرفرات``' , `${client.guilds.size}`, true)
+        .addField('``عدد المستخدمين 👥``' , `${client.users.size}`, true)
                message.channel.sendEmbed(embed);
            }
 });
@@ -240,15 +242,15 @@ client.on('message', function(msg) {
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`**${msg.guild.name}*`)
-      .addField('🌐** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
-      .addField('🏅** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
-      .addField('🔴**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
-      .addField('🔵**__ عدد الاعضاء الاونلاين__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
-      .addField('📝**__ الرومات الكتابية__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
-      .addField('🎤**__ رومات الصوت__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
-      .addField('👑**__ الأونـر__**',`**${msg.guild.owner}**`,true)
-      .addField('🆔**__ ايدي السيرفر__**',`**${msg.guild.id}**`,true)
-      .addField('📅**__ تم عمل السيرفر في__**',msg.guild.createdAt.toLocaleString())
+      .addField('``نوع السيرفر``',`[** __${msg.guild.region}__ **]`,true)
+      .addField('``الرتب``',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('``عدد الاعضاء``',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('``عدد الاعضاء الاونلاين``',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField('``الرومات الكتابية``',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
+      .addField('``رومات الصوت``',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
+      .addField('``الأونـر``',`**${msg.guild.owner}**`,true)
+      .addField(' ``ايدي السيرفر``',`**${msg.guild.id}**`,true)
+      .addField('``تم عمل السيرفر في``',msg.guild.createdAt.toLocaleString())
       msg.channel.send({embed:embed});
     }
   });
@@ -274,7 +276,7 @@ client.on('message', function(msg) {
                   .addField('Developers:', `**<@388074664649293836>**`)
                   .addField('**Support** :' , `https://discord.gg/dMMh4a6` , true)
                   .addField('**invite me** :' , `https://discordapp.com/api/oauth2/authorize?client_id=581606455539531786&permissions=0&scope=bot` , true)
-                  .setFooter('**رسالة بوت 2019**')
+                  .setFooter('``رسالة بوت 2019``')
     })
 }
 });               
