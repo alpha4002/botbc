@@ -96,7 +96,7 @@ client.on('message', msg => {
   });
 
   client.on('message', msg => {
-    if(msg.content === '-help')
+    if(msg.content === '^/help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -115,7 +115,7 @@ client.on('message', msg => {
 
   
   client.on("message", message => {
-    if (message.content === "-help") {
+    if (message.content === "^/help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
@@ -228,6 +228,52 @@ client.on('message' , message => {
         }
     }); 
 
+
+
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) { //DiamondCodes - [ X_KillerYT ]
+    let pages = [`
+***__وصف عن البوت__***
+**
+:gem:  البوت فيه كثير ميزات حلوة و جميلة
+ ا:rocket: البوت يعمل قرابة 24 ساعة
+**
+        ***__الاوامر__***
+**
+-obc | برودكسات للكل
+
+-bc  | برودكسات للاونلاين
+
+-rolebc  | برودكسات لرتبة ( حط الامر ومنشن الرتبة)
+
+-user  | معلومتك الشخصية
+
+-server  | معلومات السيرفر 
+
+-bot  | معلومات البوت 
+
+-inv  | لدعوة البوت 
+
+-contact  | للتواصل مع صاحب البوت
+
+
+**لو واجهت مشكلة كلم سيرفر الدعم هنا**
+
+    https://discord.gg/dMMh4a6
+
+
+**`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
+
+client.on('message', message => {
+    if(message.content === '-help') {
+        message.reply('تم ارساله بالخاص :white_check_mark: ');
+    }
+});
 
 
 
