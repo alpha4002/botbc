@@ -144,7 +144,7 @@ client.on('message', message => {
 client.on('guildCreate', guild => {
     var embed = new Discord.RichEmbed()
     .setColor(0x5500ff)
-    .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+    .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك لو واجهة مشكلة طلمة سيرفر الدعم**`)
         guild.owner.send(embed)
   });
 		
@@ -209,10 +209,10 @@ client.on('message' , message => {
 
 
 client.on("guildCreate", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
+    client.user.setActivity(`${prefix}help ${client.guilds.size}: , Server ${client.users.size}: , User`, {type:'WATCHING'});
 });
 client.on("guildDelete", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: Server ${client.users.size}: User`, {type:'WATCHING'});
+    client.user.setActivity(`${prefix}help ${client.guilds.size}: , Server ${client.users.size}: , User`, {type:'WATCHING'});
 });
 
 client.on('message', function(msg) {
