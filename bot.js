@@ -91,7 +91,7 @@ client.on("message", message => {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**الاوامر** 
+         .setDescription(` **الاوامر** 
 
   -obc |  لأرسال برود كاست للكل
 
@@ -141,7 +141,7 @@ client.on('message', msg => {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**رابط البوت** 
+         .setDescription(` **رابط البوت** 
 
          https://discordapp.com/api/oauth2/authorize?client_id=581606455539531786&permissions=0&scope=bot `)
    message.author.sendEmbed(embed)
