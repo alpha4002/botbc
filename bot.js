@@ -112,8 +112,7 @@ client.on("message", message => {
    ``لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك``
 
          https://discord.gg/dMMh4a6
-(embed)
-   
+
    }
    });
 
