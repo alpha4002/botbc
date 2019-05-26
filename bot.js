@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var prefix = "-"
 var adminprefix = '-'
 
-client.user.setActivity('-help | -inv', { type: 'WATCHING' })
+client.user.setActivity('YOUTUBE', { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 
