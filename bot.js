@@ -209,10 +209,10 @@ client.on('message' , message => {
 
 
 client.on("guildCreate", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: | Server ${client.users.size}:  | User`, {type:'WATCHING'});
+    client.user.setActivity(`${prefix}help ${clinet.guilds.size}: | رمضان كريم );
 });
 client.on("guildDelete", () => {
-    client.user.setActivity(`${prefix}help ${client.guilds.size}: | Server ${client.users.size}:  | User`, {type:'WATCHING'});
+    client.user.setActivity(`${prefix}help ${client.guilds.size}: | رمضان كريم );
 });
 
 client.on('message', function(msg) {
