@@ -86,37 +86,39 @@ m.sendMessage(args)
 }
 });
 
+client.on("message", message => {
+    if (message.content === "-help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**الاوامر** 
 
+  -obc |  لأرسال برود كاست للكل
 
+  -bc  |  لأرسال برود كاست للأونلاين
 
-client.on('message', msg => {
-if(msg.content === prefix+"help"){
-msg.author.send("
-
-   -obc |  لأرسال برود كاست للكل
-
-   -bc  |  لأرسال برود كاست للأونلاين
-
-   -rolebc |  لأرسال برودكسات لرتبة معينة
+  -rolebc |  لأرسال برودكسات لرتبة معينة
       
-   -bot |  معلومات البوت
+  -bot |  معلومات البوت
  
-   -inv |  لدعوة البوت لسيرفر
+  -inv |  لدعوة البوت لسيرفر
 
-   -server |  لمعرفة معلومات السيرفر
+  -server |  لمعرفة معلومات السيرفر
 
-   -user |  لمعرفة معلوماتك
+  -user |  لمعرفة معلوماتك
 
-   -contact |  للتواصل مع صاحب البوت
+  -contact |  للتواصل مع صاحب البوت
 
    ``لو واجهت اي مشكلة مع البوت سيرفر الدعم في خدمتك``
 
          https://discord.gg/dMMh4a6
+(embed)
+   
+   }
+   });
 
 
-")
-}
-});
+
 
 
 
