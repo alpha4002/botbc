@@ -141,7 +141,7 @@ client.on('message', msg => {
 
               https://discord.gg/dMMh4a6
 
-         **`)
+         `)
    message.author.sendEmbed(embed)
    
    }
