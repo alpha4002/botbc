@@ -119,7 +119,7 @@ client.on('message', msg => {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(` ``Help|هيلب
+         .setDescription(`**Help|هيلب
 
        -obc |  لأرسال برود كاست للكل
 
@@ -141,7 +141,7 @@ client.on('message', msg => {
 
               https://discord.gg/dMMh4a6
 
-       `` `)
+         **`)
    message.author.sendEmbed(embed)
    
    }
