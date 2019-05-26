@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var prefix = "-"
 var adminprefix = '-'
 
+client.user.setActivity(`-help | -inv`, { type: "STREAMING", url: "https://www.twitch.tv/jfavignano"})
 
 
 //bc
@@ -205,37 +206,9 @@ client.on('message' , message => {
             })
             message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عضو`)
         }
-    }); //Toxic Codes // n3k4a
-
-السلام عليكم اليوم
-جبتلكوا شرح سهل و اغلب الناس ما تعرف عنه كثير
-(الناس)
-مو المبرمجين عشان لاحد يجي يسبني خاص
-المهم في اشياء هم
--stream
--watch
--listen
--play
-اول شي
-1- play
-هوا بلينج عادي بي يظهر عندك
-مثل http://prntscr.com/npxwp1
-و كوده ذا 
-        client.user.setActivity("اكتب البلينج", { type: "PLAYING"})
-
-2- listen
-هوا لستينج cowboy 
-http://prntscr.com/npxxty
-        client.user.setActivity("اكتب اللستينج وصاب", { type: "LISTENING"})
-
-3 - watch 
-وتشينج emoji_m  اشرح اكثر من كذا اش
-http://prntscr.com/npxyzj
-        client.user.setActivity("اكتب ", { type: "WATCHING"})
+    }); 
 
 
-
-client.user.setActivity(`-help | -inv`, { type: "STREAMING", url: "https://www.twitch.tv/jfavignano"})
 
 
 
