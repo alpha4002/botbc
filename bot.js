@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var prefix = "-"
 var adminprefix = '-'
 
-client.user.setActivity(`-help | -inv`, { type: "STREAMING", url: "https://www.twitch.tv/jfavignano"})
+client.user.setActivity("-help | -inv", { type: "PLAYING"})
 
 
 //bc
