@@ -128,7 +128,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    if(message.content === "-bot") {
+    if(message.content === "-bbot") {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
   .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
@@ -234,6 +234,37 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
   });
+
+ client.on('message', message => {//by speedddd
+    if (message.content.startsWith('-' + "bot")) {//by speedddd
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)//by speedddd
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``INFO`` ')
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)//by speedddd
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true)
+            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+            .addField('``Users``' ,`[ ${client.users.size} ]` , true)//by speedddd
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+                  .addField('``My Prefix``' , `[ $ ]` , true)//by speedddd
+                  .addField('``My Language``' , `[ Java Script ]` , true)
+                  .addField('Developers:', `**<@543434595601743883>,<@519896224229228544>,<@577209427539787786>**`)
+                  .addField('**Support** :' , `https://discord.gg/tq5zFmv` , true)
+                  .addField('**invite me** :' , `https://discordapp.com/api/oauth2/authorize?client_id=579040679083245570&permissions=0&scope=bot` , true)
+                  .setFooter('Up Bot 2019')
+    })
+}
+});
+//by speedddd
+
+
+
+
+
 
 
 
