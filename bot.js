@@ -3,17 +3,8 @@ const client = new Discord.Client();
 var prefix = "-"
 var adminprefix = '-'
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`-help | -inv`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(argresult, "https://www.twitch.tv/idk");//حقوق دايموند كودز
-client.user.setStatus("online")
 
-});
+
 
 //bc
 
