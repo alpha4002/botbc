@@ -251,12 +251,12 @@ client.on('message', function(msg) {
             .addField('``Users``' ,`[ ${client.users.size} ]` , true)//by speedddd
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-                  .addField('``My Prefix``' , `[ $ ]` , true)//by speedddd
+                  .addField('``My Prefix``' , `[ - ]` , true)//by speedddd
                   .addField('``My Language``' , `[ Java Script ]` , true)
                   .addField('Developers:', `**<@543434595601743883>,<@519896224229228544>,<@577209427539787786>**`)
                   .addField('**Support** :' , `https://discord.gg/dMMh4a6` , true)
                   .addField('**invite me** :' , `https://discordapp.com/api/oauth2/authorize?client_id=581606455539531786&permissions=0&scope=bot` , true)
-                  .setFooter('رسالة بوت 2019')
+                  .setFooter('**رسالة بوت 2019**')
     })
 }
 });               
